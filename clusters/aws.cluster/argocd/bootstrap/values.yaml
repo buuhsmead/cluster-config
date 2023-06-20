@@ -16,7 +16,7 @@ web-terminal:
     project: cluster-config
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '21'
+      #argocd.argoproj.io/sync-wave: '21'
     destination:
       namespace: openshift-operators
     source:
