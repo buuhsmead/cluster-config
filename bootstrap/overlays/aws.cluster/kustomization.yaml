@@ -3,5 +3,6 @@ kind: Kustomization
 
 resources:
 - ../../base
+- cluster-config-project.yaml
 - cluster-config-bootstrap-app.yaml
 

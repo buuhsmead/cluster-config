@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-config-bootstrap
+  name: cluster-config
   namespace: openshift-gitops
   labels:
     gitops.ownedBy: cluster-config
