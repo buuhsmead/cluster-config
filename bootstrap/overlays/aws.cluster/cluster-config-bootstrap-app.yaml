@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: clusters/aws.cluster/argocd/bootstrap
+    path: overlays/aws.cluster/cluster-config/
     repoURL: https://github.com/buuhsmead/cluster-config.git
     targetRevision: main
   syncPolicy:
