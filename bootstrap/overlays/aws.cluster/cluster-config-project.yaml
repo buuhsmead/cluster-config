@@ -8,6 +8,15 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   description: project for managing cluster configurations
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - namespace: '*'
+      server: '*'
+  sourceRepos:
+    - '*'
+      
   # # Allow manifests to deploy from any Git repos
   # sourceRepos:
   # - '*'
