@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: cluster-config
   namespace: cluster-gitops
-  labels:
-    gitops.ownedBy: cluster-config
 spec:
   destination:
     namespace: cluster-gitops

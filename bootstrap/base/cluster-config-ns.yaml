@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cluster-gitops
+spec:
+  finalizers:
+  - kubernetes
+  
