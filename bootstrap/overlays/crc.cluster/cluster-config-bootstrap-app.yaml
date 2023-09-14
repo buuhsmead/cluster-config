@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-config
+  namespace: cluster-gitops
+  labels:
+    gitops.ownedBy: cluster-config
+spec:
+  destination:
+    namespace: cluster-gitops
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: overlays/crc.cluster/cluster-config/
+    repoURL: https://github.com/buuhsmead/cluster-config.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+
