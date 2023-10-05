@@ -9,6 +9,6 @@ else
     echo "Configuring cluster ${OVERLAY}"
 fi
 
-oc project cluster-gitops
+#oc project cluster-gitops
 kustomize build bootstrap/overlays/${OVERLAY} | oc apply -f -
 
