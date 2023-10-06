@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-config
+  name: console-links
+
 spec:
   source:
     repoURL: https://github.com/buuhsmead/cluster-config.git
     targetRevision: HEAD
-    path: overlays/crc.cluster/cluster-config
-
+    path: overlays/defaults/components/console-links

@@ -4,4 +4,6 @@ kind: Kustomization
 resources:
 # - cluster-config-project.yaml
 - cluster-config-app.yaml
+- console-links.yaml
+
 

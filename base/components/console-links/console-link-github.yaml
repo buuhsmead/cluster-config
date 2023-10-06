@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: github
+spec:
+  href: 'https://github.com/buuhsmead/cluster-config'
+  location: ApplicationMenu
+  text: Company GitHub
+  applicationMenu:
+    section: Tools
+    # imageURL:

@@ -1,11 +1,9 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1beta1
 kind: Application
 metadata:
-  name: cluster-config
+  name: web-terminal
 spec:
   source:
     repoURL: https://github.com/buuhsmead/cluster-config.git
     targetRevision: HEAD
-    path: overlays/aws.cluster/cluster-config
-
-
+    path: overlays/default/components/web-terminal
