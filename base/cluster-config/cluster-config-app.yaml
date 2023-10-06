@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: cluster-config
-  namespace: cluster-gitops
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -18,5 +17,5 @@ spec:
       selfHeal: true
   destination:
     server: https://kubernetes.default.svc
-    namespace: cluster-gitops
+    namespace: openshift-gitops
 

@@ -9,6 +9,11 @@ else
     echo "Configuring cluster ${OVERLAY}"
 fi
 
-#oc project cluster-gitops
-kustomize build bootstrap/overlays/${OVERLAY} | oc apply -f -
+oc project openshift-gitops
+kustomize build bootstrap/overlays/${OVERLAY}/operator | oc apply -f -
+
+# wait until Operator is ready
+oc wait --for=condition=ready pod -l control-plane=gitops-operator -n openshift-gitops-operator
+
+kustomize build bootstrap/overlays/${OVERLAY}/instance | oc apply -f -
 

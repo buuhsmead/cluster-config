@@ -6,6 +6,5 @@ spec:
   source:
     repoURL: https://github.com/buuhsmead/cluster-config.git
     targetRevision: HEAD
-    path: overlays/aws.cluster/cluster-config
-
+    path: overlays/default/cluster-config
 
