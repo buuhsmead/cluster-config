@@ -7,4 +7,4 @@ spec:
   source:
     repoURL: https://github.com/buuhsmead/cluster-config.git
     targetRevision: HEAD
-    path: overlays/defaults/components/console-links
+    path: overlays/default/components/console-links
