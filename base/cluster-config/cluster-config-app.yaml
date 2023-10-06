@@ -5,7 +5,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: cluster-config
+  project: default
   source:
     repoURL: patch-me
     targetRevision: HEAD
