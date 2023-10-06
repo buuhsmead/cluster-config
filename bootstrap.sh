@@ -10,10 +10,14 @@ else
 fi
 
 oc project openshift-gitops
+# Operator
 kustomize build bootstrap/overlays/${OVERLAY}/operator | oc apply -f -
 
 # wait until Operator is ready
 oc wait --for=condition=ready pod -l control-plane=gitops-operator -n openshift-gitops-operator
 
+# Instance
 kustomize build bootstrap/overlays/${OVERLAY}/instance | oc apply -f -
 
+# Cluster Config
+kustomize build overlays/${OVERLAY}/cluster-config/ | oc apply -f -
