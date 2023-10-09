@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - ../../../base/cluster-config
+- app-set.yaml
 
 patches:
 - path: patch-cluster-config-app.yaml
