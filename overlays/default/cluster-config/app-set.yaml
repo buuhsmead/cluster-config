@@ -12,7 +12,7 @@ spec:
       - path: overlays/default/components/*
   template:
     metadata:
-      name: '{{path.basename}}-app-set'
+      name: '{{path.basename}}'
     spec:
       project: default
       syncPolicy:
