@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - ../../../components/web-terminal-operator/base
 
-patches:
+
