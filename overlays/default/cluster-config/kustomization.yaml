@@ -7,5 +7,5 @@ resources:
 
 patches:
 - path: patch-cluster-config-app.yaml
-- path: patch-console-links.yaml
+# - path: patch-console-links.yaml
 
