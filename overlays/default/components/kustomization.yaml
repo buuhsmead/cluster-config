@@ -3,3 +3,7 @@ kind: Kustomization
 
 # resources:
 # - ../../../base/components
+
+commonLabels:
+  app-set: cluster-config
+  
