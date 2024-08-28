@@ -11,6 +11,8 @@ else
     echo "Configuring cluster ${OVERLAY}"
 fi
 
+
+
 #oc project openshift-gitops
 # Operator
 kustomize build bootstrap/overlays/${OVERLAY}/operator/ | oc apply -f -
