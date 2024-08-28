@@ -25,4 +25,4 @@ oc wait --for=condition=ready pod -l control-plane=gitops-operator -n openshift-
 kustomize build bootstrap/overlays/${OVERLAY}/instance | oc apply -f -
 
 # Cluster Config
-##kustomize build overlays/${OVERLAY}/cluster-config/ | oc apply -f -
+kustomize build overlays/${OVERLAY}/cluster-config/ | oc apply -f -
