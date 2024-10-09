@@ -18,7 +18,7 @@ fi
 kustomize build bootstrap/overlays/${OVERLAY}/operator/ | oc apply -f -
 
 # wait until Operator is ready
-until [ $(oc get csv -n openshift-gitops-operator -l operators.coreos.com/openshift-gitops-operator.openshift-gitops-operator | grep Succeeded > /dev/null; echo $?) == 0 ]; do echo "Waiting for GitOps operator"; sleep 5; done
+until [ $(oc get csv -n openshift-gitops-operator | grep Succeeded > /dev/null; echo $?) == 0 ]; do echo "Waiting for GitOps operator"; sleep 5; done
 oc wait --for=condition=ready pod -l control-plane=gitops-operator -n openshift-gitops-operator
 
 
@@ -28,3 +28,4 @@ kustomize build bootstrap/overlays/${OVERLAY}/instance | oc apply -f -
 
 # Cluster Config
 kustomize build overlays/${OVERLAY}/cluster-config/ | oc apply -f -
+
